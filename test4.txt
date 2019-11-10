@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<iostream>
+#include<cmath> 
+using namespace std;
+int main(){
+	int n;
+	cin>>n;
+	cout<<n<<"=";
+	for(int i=2; i<=sqrt(n); i++){
+		for(;n!=i;){
+			if(n%i==0){
+				cout<<i<<"*";
+				n/=i;
+			}
+			if(n%i)break;
+		}
+	}
+	cout<<n;
+}
